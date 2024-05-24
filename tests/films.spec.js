@@ -291,10 +291,37 @@ describe('Function "orderByYear"', () => {
 });
 
 // Exercise 6
-// YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+  it('should be declared', () => {
+    expect(typeof moviesAverageByCategory).toBe('function')
+  });
+
+  //Thriller Case:
+  it('should return a number', () => {
+    expect(typeof moviesAverageByCategory(movies, 'Thriller')).toBe('number')
+  });
+
+  it('should be different from NaN', () => {
+    expect(moviesAverageByCategory(movies, 'Thriller')).not.toBeNaN()
+  });
+
+  it ('should return the average of the movies of an introduced genere (in this case: Thriller). With two decimals', () => {
+    const thrillerMovies = movies.filter(movie => movie.genre.includes('Thriller'))
+    expect(moviesAverageByCategory(thrillerMovies, 'Thriller')).toBe(8.28)
+  });
+
+  //Comedy Case:
+  it('should return a number', () => {
+    expect(typeof moviesAverageByCategory(movies, 'Comedy')).toBe('number')
+  });
+
+  it('should be different from NaN', () => {
+    expect(moviesAverageByCategory(movies, 'Comedy')).not.toBeNaN()
+  });
+
+  it ('should return the average of the movies of an introduced genere (in this case: Comedy). With two decimals', () => {
+    const comedyMovies = movies.filter(movie => movie.genre.includes('Comedy'))
+    expect(moviesAverageByCategory(comedyMovies, 'Comedy')).toBe(8.27)
   });
 });
 
