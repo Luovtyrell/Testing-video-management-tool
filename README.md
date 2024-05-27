@@ -1,59 +1,44 @@
-# Sprint 3 IT Academy | Video management tool
+# Sprint 3 IT Academy | Video Management Tool
 
 ## Introduction
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+A company in the audiovisual sector has requested a web application to help their employees quickly find movies from their extensive database, which is currently managed manually.
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+You are tasked with setting up the core of the application, focusing on the logic for filtering and sorting movies. You have 2 weeks to complete this task, which coincides with the duration of this sprint.
 
-<br>
+### Frontend Requirements
 
-## Requirements
-
-
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
-```
-
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
-
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
+- Implement all loops in ES6 (use `map`, `reduce`, `filter`, and `sort` to manipulate arrays).
+- As we are not yet consuming data from a server API, use the data from the `src/data.js` file. For now, we will work with an array of around 250 movies.
+- The implementation involves processing this array of movies to meet the requirements of each exercise.
+- Place all logic implementations in the `src/films.js` file.
+- You do not need to display the results of each function on the screen; your goal is to pass the tests. More information on test-driven development is provided at the end of this document.
+- Remember to upload the test results screenshot to the virtual campus.
 
 <br>
 
-## Submission
+## Objectives
 
-1. Upon completion, run the following commands:
-
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
-
-2. Create Pull Request.
-
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
-
-
+- Understand and practice using ES6 methods: `map`, `reduce`, `filter`, and `sort`.
+- Create Unit Tests.
+- Learn to manipulate a dataset.
 
 <br>
 
-## Introduction
+## Exercises
 
-The statement of the exercise is available on the virtual campus.
+1. **Function `getAllDirectors()`**
+2. **Function `getMoviesFromDirector()`**
+3. **Function `moviesAverageOfDirector()`**
+4. **Sort the first 20 movies alphabetically**
+5. **Sort the movies by year and if they coincide by year, sort them alphabetically**
+6. **Calculate the average movie rating and create a unit test for it**
+7. **Convert the movie duration to minutes**
+8. **Find the best film of every year**
 
 <br>
 
-## Tests!
-
+## Running Tests
 
 ```shell
 $ npm install
@@ -66,21 +51,20 @@ Apart from the statement, you will know exactly what you are asked to do by look
 
 <br>
 
-## Instructions
+## Test passed:
 
-You have the following indications from the frontend responsible:
+<div style="display: flex; justify.content: center; max-width: 1000px; margin:auto">
+<img src='./tests/Captura de pantalla 2024-05-24 a las 18.32.55.png' alt='Succesful test'>
+</div>
 
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
+<br>
 
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
+## Author
 
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
+- **Lucía Mª Ordoñez Vilanova** - _React, It Academy_.
 
-- The logic to implement will be placed in the src/films.js file.
+<br>
 
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
+## License
 
-- Don't forget to include the capture of the test results in the virtual campus.
-
-
+This project is based on the starter code provided by [starter-code-frontend-sprint-3-movies](https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies), which is part of the IT Academy curriculum.
